@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Szimonetta (http://jsbin.com/giwabe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="triangle()">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+
+function triangle(x,y,a) {
+
+  context.beginPath();
+  context.moveTo(x,y);
+  context.lineTo(x-a/2,y+a);
+  context.lineTo(x+a/2,y+a);
+  context.lineTo(x,y);
+  context.strokeStyle='grey';
+  context.stroke();
+  context.fillStyle='rgba(255,192,0,0.5)';
+  context.fill();
+}
+
+triangle(230,160,50);
+triangle(270,100,50);
+triangle(200,50,150);
+</script>
+</body>
+</html>
